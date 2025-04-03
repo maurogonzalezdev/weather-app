@@ -1,14 +1,32 @@
 {
   "name": "weather-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
+  "description": "Weather App: A responsive application providing real-time weather data and forecasts worldwide.",
+  "author": "Mauricio González <hello@mauro-gonzalez.dev>",
+  "private": false,
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maurogonzalezdev/weather-app.git"
+  },
+  "keywords": [
+    "angular",
+    "weather",
+    "app",
+    "standalone",
+    "project"
+  ],
+  "bugs": {
+    "url": "https://github.com/maurogonzalezdev/weather-app/issues"
+  },
+  "homepage": "https://github.com/maurogonzalezdev/weather-app#readme",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "cross-env NG_APP_ENV=development ng serve",
+    "build": "cross-env NG_APP_ENV=production ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.0",
     "@angular/common": "^19.1.0",
@@ -26,7 +44,9 @@
     "@angular-devkit/build-angular": "^19.1.8",
     "@angular/cli": "^19.1.8",
     "@angular/compiler-cli": "^19.1.0",
+    "@ngx-env/builder": "19.0.4",
     "@types/jasmine": "~5.1.0",
+    "cross-env": "^7.0.3",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
