@@ -11,6 +11,9 @@ importers:
       '@angular/animations':
         specifier: ^19.1.0
         version: 19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))
+      '@angular/cdk':
+        specifier: ^19.2.8
+        version: 19.2.8(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
       '@angular/common':
         specifier: ^19.1.0
         version: 19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
@@ -32,6 +35,9 @@ importers:
       '@angular/router':
         specifier: ^19.1.0
         version: 19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(@angular/platform-browser@19.2.5(@angular/animations@19.2.5(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0)))(rxjs@7.8.2)
+      primeflex:
+        specifier: ^4.0.0
+        version: 4.0.0
       rxjs:
         specifier: ~7.8.0
         version: 7.8.2
@@ -53,7 +59,7 @@ importers:
         version: 19.2.5(@angular/compiler@19.2.5)(typescript@5.7.3)
       '@ngx-env/builder':
         specifier: 19.0.4
-        version: 19.0.4(webpack@5.98.0(esbuild@0.25.1))
+        version: 19.0.4(webpack@5.98.0)
       '@types/jasmine':
         specifier: ~5.1.0
         version: 5.1.7
@@ -198,6 +204,13 @@ packages:
         optional: true
       tailwindcss:
         optional: true
+
+  '@angular/cdk@19.2.8':
+    resolution: {integrity: sha512-ZZqWVYFF80TdjWkk2sc9Pn2luhiYeC78VH3Yjeln4wXMsTGDsvKPBcuOxSxxpJ31saaVBehDjBUuXMqGRj8KuA==}
+    peerDependencies:
+      '@angular/common': ^19.0.0 || ^20.0.0
+      '@angular/core': ^19.0.0 || ^20.0.0
+      rxjs: ^6.5.3 || ^7.4.0
 
   '@angular/cli@19.2.6':
     resolution: {integrity: sha512-eZhFOSsDUHKaciwcWdU5C54ViAvPPdZJf42So93G2vZWDtEq6Uk47huocn1FY9cMhDvURfYLNrrLMpUDtUSsSA==}
@@ -3442,6 +3455,9 @@ packages:
     resolution: {integrity: sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==}
     engines: {node: ^10 || ^12 || >=14}
 
+  primeflex@4.0.0:
+    resolution: {integrity: sha512-UOEZCRjR36+sm5bUpDhS1xbA068l9VC6y1aTNVqQPtXuKIdPTqAWHRUxj3mKAoPrQ9W373ooJJMgNVXfiaw04g==}
+
   proc-log@5.0.0:
     resolution: {integrity: sha512-Azwzvl90HaF0aCz1JrDdXQykFakSSNPaPoiZ9fm5qJIMHioDZEi7OAdRwSm6rSoPtY3Qutnm3L7ogmg3dc+wbQ==}
     engines: {node: ^18.17.0 || >=20.5.0}
@@ -4439,6 +4455,14 @@ snapshots:
       - tsx
       - yaml
 
+  '@angular/cdk@19.2.8(@angular/common@19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2))(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)':
+    dependencies:
+      '@angular/common': 19.2.5(@angular/core@19.2.5(rxjs@7.8.2)(zone.js@0.15.0))(rxjs@7.8.2)
+      '@angular/core': 19.2.5(rxjs@7.8.2)(zone.js@0.15.0)
+      parse5: 7.2.1
+      rxjs: 7.8.2
+      tslib: 2.8.1
+
   '@angular/cli@19.2.6(@types/node@22.14.0)(chokidar@4.0.3)':
     dependencies:
       '@angular-devkit/architect': 0.1902.6(chokidar@4.0.3)
@@ -5229,7 +5253,7 @@ snapshots:
       dotenv-expand: 10.0.0
       find-up: 5.0.0
 
-  '@dotenv-run/webpack@1.5.0(webpack@5.98.0(esbuild@0.25.1))':
+  '@dotenv-run/webpack@1.5.0(webpack@5.98.0)':
     dependencies:
       '@dotenv-run/core': 1.3.6
       webpack: 5.98.0(esbuild@0.25.1)
@@ -5606,9 +5630,9 @@ snapshots:
       typescript: 5.7.3
       webpack: 5.98.0(esbuild@0.25.1)
 
-  '@ngx-env/builder@19.0.4(webpack@5.98.0(esbuild@0.25.1))':
+  '@ngx-env/builder@19.0.4(webpack@5.98.0)':
     dependencies:
-      '@dotenv-run/webpack': 1.5.0(webpack@5.98.0(esbuild@0.25.1))
+      '@dotenv-run/webpack': 1.5.0(webpack@5.98.0)
       glob: 10.4.5
     transitivePeerDependencies:
       - webpack
@@ -7872,6 +7896,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  primeflex@4.0.0: {}
 
   proc-log@5.0.0: {}
 
