@@ -1,0 +1,30 @@
+:root, [data-theme="light"] {
+  --surface-900: #d62b2b;
+  --surface-800: #9b5151;
+  --text-primary: #212529;
+}
+
+[data-theme="dark"] {
+  --surface-900: #0f172a;
+  --surface-800: #293242;
+  --text-primary: #ffffff;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.text-primary{
+  color: var(--text-primary) !important;
+}
+
+.bg-surface-900 {
+  background-color: var(--surface-900) !important;
+}
+
+.bg-surface-800 {
+  background-color: var(--surface-800) !important;
+}

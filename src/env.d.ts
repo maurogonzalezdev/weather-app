@@ -4,6 +4,8 @@ declare interface Env {
   readonly NG_APP_API_KEY: string;
   readonly NG_APP_API_URL: string;
   readonly NG_APP_VERSION: string;
+  readonly NG_APP_MOBILE_BREAKPOINT: number;
+  readonly NG_APP_TABLET_BREAKPOINT: number;
 }
 
 // Choose how to access the environment variables.
